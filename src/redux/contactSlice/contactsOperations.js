@@ -1,18 +1,69 @@
-import { createAsyncThunk } from "@reduxjs/toolkit";
-import * as api from "../../services/api";
+import axios from "axios";
+import {
+  addContactRequest,
+  addContactSuccess,
+  addContactError,
+  deleteContactRequest,
+  deleteContactSuccess,
+  deleteContactError,
+  getContactsRequest,
+  getContactsSuccess,
+  getContactsError,
+} from "./contactsActions";
 
-const API_ENDPOINT = "contacts";
+axios.defaults.baseURL = "https://connections-api.herokuapp.com";
 
-const getContacts = createAsyncThunk("contacts/getContactsStatus", () =>
-  api.getData(API_ENDPOINT)
-);
+const getContacts = () => (dispatch) => {
+  dispatch(getContactsRequest());
 
-const addContact = createAsyncThunk("contacts/addContactStatus", (newContact) =>
-  api.saveItem(API_ENDPOINT, newContact)
-);
+  axios
+    .get("/contacts")
+    .then(({ data }) => {
+      dispatch(getContactsSuccess(data));
+    })
+    .catch((error) => dispatch(getContactsError(error)));
+};
 
-const deleteContact = createAsyncThunk("contacts/deleteContactStatus", (id) =>
-  api.deleteItem(API_ENDPOINT, id)
-);
+const addContact = (contact) => (dispatch) => {
+  dispatch(addContactRequest());
 
-export { getContacts, addContact, deleteContact };
+  axios
+    .post("/contacts", contact)
+    .then(({ data }) => {
+      dispatch(addContactSuccess(data));
+    })
+    .catch((error) => dispatch(addContactError(error)));
+};
+
+const deleteContact = (id) => (dispatch) => {
+  dispatch(deleteContactRequest());
+
+  axios
+    .delete(`/contacts/${id}`)
+    .then(() => {
+      dispatch(deleteContactSuccess(id));
+    })
+    .catch((error) => dispatch(deleteContactError(error)));
+};
+
+// eslint-disable-next-line import/no-anonymous-default-export
+export default { addContact, deleteContact, getContacts };
+
+// import { createAsyncThunk } from "@reduxjs/toolkit";
+// import * as api from "../../services/api";
+
+// const API_ENDPOINT = "contacts";
+
+// const getContacts = createAsyncThunk("contacts/getContactsStatus", () =>
+//   api.getData(API_ENDPOINT)
+// );
+
+// const addContact = createAsyncThunk("contacts/addContactStatus", (newContact) =>
+//   api.saveItem(API_ENDPOINT, newContact)
+// );
+
+// const deleteContact = createAsyncThunk("contacts/deleteContactStatus", (id) =>
+//   api.deleteItem(API_ENDPOINT, id)
+// );
+
+// export { getContacts, addContact, deleteContact };

@@ -1,10 +1,18 @@
 import { useState } from "react";
-import PropTypes from "prop-types";
+import { useDispatch, useSelector } from "react-redux";
+// import PropTypes from "prop-types";
+import contactsOperations from "../../redux/contactSlice/contactsOperations";
+import contactsSelectors from "../../redux/contactSlice/contactsSelectors";
 import s from "./ContactForm.module.css";
 
-const ContactForm = ({ onSubmit }) => {
+const ContactForm = () => {
   const [name, setName] = useState("");
   const [number, setNumber] = useState("");
+
+  const contacts = useSelector((state) =>
+    contactsSelectors.getAllContacts(state)
+  );
+  const dispatch = useDispatch();
 
   const handleChange = (event) => {
     const { name, value } = event.target;
@@ -20,11 +28,18 @@ const ContactForm = ({ onSubmit }) => {
     }
   };
 
-  const handleSubmit = (event) => {
-    event.preventDefault();
-    onSubmit(name, number);
+  const reset = () => {
     setName("");
     setNumber("");
+  };
+  const handleSubmit = (event) => {
+    event.preventDefault();
+    contacts.find(
+      (contact) => contact.name.toLowerCase() === name.toLowerCase()
+    )
+      ? alert(`${name} is already in contacts`)
+      : dispatch(contactsOperations.addContact({ name, number }));
+    reset();
   };
 
   return (
@@ -64,7 +79,7 @@ const ContactForm = ({ onSubmit }) => {
   );
 };
 
-ContactForm.propTypes = {
-  onSubmit: PropTypes.func.isRequired,
-};
+// ContactForm.propTypes = {
+//   onSubmit: PropTypes.func.isRequired,
+// };
 export default ContactForm;
