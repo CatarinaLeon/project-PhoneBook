@@ -4,7 +4,6 @@ import { Switch } from "react-router-dom";
 import { Fragment, Suspense } from "react";
 
 import AppBar from "./components/AppBar/AppBar";
-import Container from "./components/Container/Container";
 
 import HomeView from "./views/HomeView";
 import RegisterView from "./views/RegisterView";
@@ -27,7 +26,7 @@ const App = () => {
   }, [dispatch]);
 
   return (
-    <Container>
+    <>
       {isFetchingCurrentUser ? (
         <h2>loading...</h2>
       ) : (
@@ -57,15 +56,18 @@ const App = () => {
               >
                 <RegisterView />
               </PublicRoute>
-
-              <PrivateRoute path="/contacts" redirectTo="/register">
+              <PrivateRoute
+                exact
+                path="/contacts"
+                restrictedredirectTo="/register"
+              >
                 <ContactsView />
               </PrivateRoute>
             </Suspense>
           </Switch>
         </Fragment>
       )}
-    </Container>
+    </>
   );
 };
 export default App;

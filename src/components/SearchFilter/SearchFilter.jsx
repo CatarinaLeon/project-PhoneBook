@@ -10,7 +10,7 @@ function SearchFilter() {
   const dispatch = useDispatch();
 
   return (
-    <div className={s.filterSearch}>
+    <div className={s.filterContainer}>
       <label className={s.filter}>
         Find contacts by name:
         <input
