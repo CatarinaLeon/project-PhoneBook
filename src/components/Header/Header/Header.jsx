@@ -1,10 +1,10 @@
 import { memo } from "react";
 import { useSelector } from "react-redux";
 import { NavLink } from "react-router-dom";
-import authSelectors from "../../redux/Auth/auth-selectors";
+import authSelectors from "../../../redux/Auth/auth-selectors";
 
-import UserMenu from "./UserMenu/UserMenu";
-import AuthNav from "./AuthNav/AuthNav";
+import UserMenu from "../UserMenu/UserMenu";
+import AuthNav from "../AuthNav/AuthNav";
 import s from "./Header.module.css";
 
 function Header() {

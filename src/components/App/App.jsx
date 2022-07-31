@@ -3,7 +3,7 @@ import { useDispatch, useSelector } from "react-redux";
 import { Switch } from "react-router-dom";
 import { Fragment, Suspense } from "react";
 
-import Header from "../Header/Header";
+import Header from "../Header/Header/Header";
 
 import HomeView from "../../views/HomeView/HomeView";
 import RegisterView from "../../views/RegisterView/RegisterView";
