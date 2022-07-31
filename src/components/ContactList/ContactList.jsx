@@ -5,7 +5,8 @@ import contactsOperations from "../../redux/contactSlice/contactsOperations";
 import contactsSelectors from "../../redux/contactSlice/contactsSelectors";
 
 import SearchFilter from "../SearchFilter/SearchFilter";
-import Notice from "../Notice/Notice";
+import Notice from "../../common/Notice/Notice";
+import Button from "../../common/Button/Button";
 
 import s from "./ContactList.module.css";
 
@@ -26,30 +27,27 @@ const ContactList = () => {
 
   return (
     <>
-      <h2>Contacts</h2>
+      <h2 className={s.contactsTitle}>Contacts</h2>
       {allContacts.length > 0 ? (
         <Fragment>
           <SearchFilter />
           <ul className={s.list}>
             {visibleContacts.length === 0 ? (
-              <li className={s.itemCont}>
-                <h4>No contact found with this name</h4>
+              <li className={s.listItemMessage}>
+                <Notice message="No contact found with this name" />
               </li>
             ) : (
               visibleContacts.map(({ id, name, number }) => (
                 <li key={id} className={s.listItem}>
-                  <p className={s.listItemText}>{name} :</p>
+                  <p className={s.listItemText}>{name}</p>
                   <p className={s.listItemTextNumber}>{number} </p>
-                  <button
-                    type="button"
+                  <Button
+                    message="Delete"
                     name={id}
                     onClick={() =>
                       dispatch(contactsOperations.deleteContact(id))
                     }
-                    className={s.listItemBtn}
-                  >
-                    Delete
-                  </button>
+                  />
                 </li>
               ))
             )}

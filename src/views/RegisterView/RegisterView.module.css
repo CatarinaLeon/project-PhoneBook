@@ -1,0 +1,36 @@
+.form {
+    width: 350px;
+    margin: 0 auto;
+    padding: 30px 60px;
+    border-radius: 5px;
+    background-color: var(--backgroundSecond);
+    box-shadow: 0 0 5px 1px var(--textColorBtn);
+}
+
+.label {
+    font-weight: 700;
+    text-align: left;
+}
+
+.input {
+    width: 300px;
+    margin: 5px 0 15px 0;
+    border-radius: 5px;
+    background-color: var(--backgroundThird);
+    padding: 8px 20px;
+    border: 1px solid var(--textColorBtn);
+}
+
+.input:hover,
+.input:focus {
+    box-shadow: 0 0 5px 1px var(--backgroundMain);
+}
+
+.button {
+    margin: 0 auto;
+}
+
+.button:hover {
+    background-color: var(--textColorBtn);
+    box-shadow: 0 0 5px 1px var(--backgroundMain);
+}

@@ -1,39 +1,30 @@
 .contactForm {
-  padding: 20px 40px;
-  border: 1px solid #06196eab;
+  margin-bottom: 30px;
+  padding: 30px 40px;
   border-radius: 5px;
+  text-align: center;
+  background-color: #98e3b7;
+  box-shadow: 0 0 5px 1px var(--textColorBtn);
 }
 
-.contactLabel {
-  font: inherit;
-  font-weight: 500;
-}
-
-.contactInputName {
+.contactInput {
   width: 300px;
-  margin-left: 27px;
-  margin-right: 50px;
+  margin-bottom: 10px;
+  border-radius: 5px;
+  background-color: #f6f3e0;
+  padding: 8px 20px;
+  border: 1px solid var(--textColorBtn);
 }
-
-.contactInputNumber {
-  width: 300px;
-  margin-left: 10px;
-  margin-right: 50px;
+.contactInput:hover, 
+.contactInput:focus{
+box-shadow: 0 0 5px 1px var(--backgroundMain);
 }
 
 .contactBtn {
-  padding: 5px 15px;
-  margin: 5px auto 10px auto;
-  display: block;
-  background-color: #06196eab;
-  color: white;
-  border-radius: 5px;
-  border-color: #0a0131ab;
-  font: inherit;
+  margin: 0 auto;
 }
 
 .contactBtn:hover {
-  background-color: white;
-  color: #010508ab;
-  border-color: #0a0131ab;
+  background-color: var(--textColorBtn);
+  box-shadow: 0 0 5px 1px var(--backgroundMain);
 }

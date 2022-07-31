@@ -1,0 +1,53 @@
+@media screen and (min-width: 480px) {
+    .cat {
+        position: absolute;
+        width: 125px;
+        height: 70px;
+        bottom: 105px;
+        right: 35%;
+        background-image: url('../../images/pngegg5.png');
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: contain;
+    }
+}
+
+@media screen and (min-width: 768px) {
+    .cat{
+    width: 140px;
+    height: 155px;
+    top: 370px;
+    right: 80px;
+    background-image: url('../../images/cat.png');
+}
+}
+
+@media screen and (min-width: 950px) {
+.cat {
+    position: fixed;
+    z-index: -1;
+    width: 160px;
+    height: 295px;
+    top: 290px;
+    right: 0px;
+    background-image: url('../../images/pngegg13.png');
+}
+}
+
+@media screen and (min-width: 1100px) {
+    .cat {
+        z-index: -1;
+        top: 180px;
+        width: 250px;
+        height: 320px;
+    }
+}
+
+@media screen and (min-width: 1300px) {
+    .cat {
+        right: 0px;
+        top: 70px;
+        width: 400px;
+        height: 550px;
+    }
+}

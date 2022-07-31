@@ -1,0 +1,24 @@
+.homeView {
+    padding: 30px 40px;
+    border-radius: 5px;
+    background-color: #98e3b7;
+    box-shadow: 0 0 5px 1px var(--textColorBtn);
+}
+
+.subtitle {
+    font-weight: 700;
+    font-size: 24px;
+    text-align: center;
+    color: black;
+}
+
+.link {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 45px;
+    font-weight: 700;
+    font-size: 22px;
+    color: red;
+
+}

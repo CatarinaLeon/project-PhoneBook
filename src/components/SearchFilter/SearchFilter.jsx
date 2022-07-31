@@ -10,18 +10,18 @@ function SearchFilter() {
   const dispatch = useDispatch();
 
   return (
-    <div className={s.filterContainer}>
-      <label className={s.filter}>
+    <form className={s.filterForm}>
+      <label className={s.filterLabel}>
         Find contacts by name:
         <input
           type="text"
           name="filter"
           value={filterValue}
           onChange={(e) => dispatch(changeFilter(e.target.value))}
-          className={s.input}
+          className={s.filterInput}
         />
       </label>
-    </div>
+    </form>
   );
 }
 
