@@ -1,6 +1,7 @@
-.header {
+.headerContainer {
     padding: 30px 0px;
-    background-color: #98e3b7;
+    background-color: var(--backgroundSecond);
+    box-shadow: 0 0px 5px 1px var(--textColorBtn);
 }
 
 .headerLink {
@@ -12,7 +13,7 @@
 }
 
 .headerNav{
-    max-width: 480px;
+    /* max-width: 480px; */
     margin: 0 auto;
     padding: 0 15px;
     display: flex;

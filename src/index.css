@@ -7,7 +7,6 @@
 body {
   font-family: "Montserrat Alternates", sans-serif;
   /* font-family: 'Lobster Two', cursive; */
-  /* background-image: url('./images/maxresdefault.jpg'); */
   font-weight: 400;
   color: black;
   margin: 0;
@@ -29,8 +28,6 @@ ul {
 li {
   text-decoration: none;
   list-style-type: none;
-  background-color: #98e3b7;
-  box-shadow: 0 0px 10px 1px rgb(245 59 59);
 }
 
 input {

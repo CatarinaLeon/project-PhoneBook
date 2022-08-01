@@ -3,6 +3,7 @@ import { useDispatch } from "react-redux";
 import Button from "../../common/Button/Button";
 import { SecondLevelTitle } from "../../common/SecondLevelTitle/SecondLevelTitle";
 import authOperations from "../../redux/Auth/auth-operations";
+import ImgLogin from "../../common/BackgroundImg/ImgLogin/ImgLogin";
 
 import s from "./LoginView.module.css";
 
@@ -56,6 +57,7 @@ export default function LoginView() {
         </label>
         <Button type="submit" message="Sign In" className={s.button} />
       </form>
+      <ImgLogin />
     </>
   );
 }

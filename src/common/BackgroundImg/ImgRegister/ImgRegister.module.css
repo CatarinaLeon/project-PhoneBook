@@ -1,0 +1,27 @@
+@media screen and (min-width: 480px) {
+    .imgRegister {
+        position: absolute;
+        width: 184px;
+        height: 204px;
+        bottom: 95px;
+        right: 63%;
+        background-image: url('../../../images/pngegg2.png');
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: contain;
+    }
+}
+
+/* @media screen and (min-width: 768px) {
+    .imgRegister {
+        right: 33%;
+    }
+} */
+
+@media screen and (min-width: 1280px) {
+    .imgRegister {
+    width: 260px;
+    height: 350px;
+    right: 68%;
+    }
+}

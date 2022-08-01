@@ -1,9 +1,9 @@
 import { useEffect } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { Switch } from "react-router-dom";
-import { Fragment, Suspense } from "react";
+import { Suspense } from "react";
 
-import Header from "../Header/Header/Header";
+import Header from "../Header/HeaderNav/HeaderNav";
 
 import HomeView from "../../views/HomeView/HomeView";
 import RegisterView from "../../views/RegisterView/RegisterView";
@@ -34,48 +34,46 @@ const App = () => {
       {isFetchingCurrentUser ? (
         <h2>loading...</h2>
       ) : (
-        <Fragment>
-          <Suspense>
-            <Header />
-            <Section>
-              <Container>
-                <Switch fallback={<h3>Loading...</h3>}>
-                  <PublicRoute exact path="/">
-                    <HomeView />
-                  </PublicRoute>
+        <Suspense>
+          <Header />
+          <Section>
+            <Container>
+              <Switch fallback={<h3>Loading...</h3>}>
+                <PublicRoute exact path="/">
+                  <HomeView />
+                </PublicRoute>
 
-                  <PublicRoute
-                    exact
-                    path="/login"
-                    restricted
-                    redirectTo="/contacts"
-                  >
-                    <LoginView />
-                  </PublicRoute>
+                <PublicRoute
+                  exact
+                  path="/login"
+                  restricted
+                  redirectTo="/contacts"
+                >
+                  <LoginView />
+                </PublicRoute>
 
-                  <PublicRoute
-                    exact
-                    path="/register"
-                    restricted
-                    redirectTo="/contacts"
-                  >
-                    <RegisterView />
-                  </PublicRoute>
+                <PublicRoute
+                  exact
+                  path="/register"
+                  restricted
+                  redirectTo="/contacts"
+                >
+                  <RegisterView />
+                </PublicRoute>
 
-                  <PrivateRoute
-                    exact
-                    path="/contacts"
-                    // restrictedredirectTo="/"
-                    redirectTo="/register"
-                  >
-                    <ContactsView />
-                  </PrivateRoute>
-                </Switch>
-              </Container>
-            </Section>
-            <Footer />
-          </Suspense>
-        </Fragment>
+                <PrivateRoute
+                  exact
+                  path="/contacts"
+                  // restrictedredirectTo="/"
+                  redirectTo="/register"
+                >
+                  <ContactsView />
+                </PrivateRoute>
+              </Switch>
+            </Container>
+          </Section>
+          <Footer />
+        </Suspense>
       )}
     </>
   );

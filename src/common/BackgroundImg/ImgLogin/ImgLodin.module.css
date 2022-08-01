@@ -1,0 +1,27 @@
+@media screen and (min-width: 480px) {
+    .imgLogin {
+        position: absolute;
+        width: 184px;
+        height: 204px;
+        bottom: 85px;
+        right: 63%;
+        background-image: url('../../../images/pngegg3.png');
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: contain;
+    }
+}
+
+/* @media screen and (min-width: 768px) {
+    .imgLogin {
+        right: 33%;
+    }
+} */
+
+@media screen and (min-width: 1280px) {
+    .imgLogin {
+        width: 260px;
+        height: 350px;
+        right: 68%;
+    }
+}

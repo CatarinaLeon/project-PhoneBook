@@ -1,10 +1,9 @@
 import PropTypes from "prop-types";
-import { Fragment, useEffect } from "react";
+import { useEffect } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import contactsOperations from "../../redux/contactSlice/contactsOperations";
 import contactsSelectors from "../../redux/contactSlice/contactsSelectors";
 
-import SearchFilter from "../SearchFilter/SearchFilter";
 import Notice from "../../common/Notice/Notice";
 import Button from "../../common/Button/Button";
 
@@ -27,18 +26,16 @@ const ContactList = () => {
 
   return (
     <>
-      <h2 className={s.contactsTitle}>Contacts</h2>
-      {allContacts.length > 0 ? (
-        <Fragment>
-          <SearchFilter />
-          <ul className={s.list}>
+      <ul className={s.list}>
+        {allContacts.length > 0 ? (
+          <>
             {visibleContacts.length === 0 ? (
-              <li className={s.listItemMessage}>
+              <li className={`${s.listItem} ${s.listItemMessage}`}>
                 <Notice message="No contact found with this name" />
               </li>
             ) : (
               visibleContacts.map(({ id, name, number }) => (
-                <li key={id} className={s.listItem}>
+                <li key={id} className={`${s.listItem} ${s.listItemMessage}`}>
                   <p className={s.listItemText}>{name}</p>
                   <p className={s.listItemTextNumber}>{number} </p>
                   <Button
@@ -51,11 +48,13 @@ const ContactList = () => {
                 </li>
               ))
             )}
-          </ul>
-        </Fragment>
-      ) : (
-        <Notice message="Contact list is empty" />
-      )}
+          </>
+        ) : (
+          <li className={`${s.listItem} ${s.listItemMessage}`}>
+            <Notice message="Contact list is empty" />
+          </li>
+        )}
+      </ul>
     </>
   );
 };

@@ -3,6 +3,7 @@ import { useDispatch } from "react-redux";
 import Button from "../../common/Button/Button";
 import { SecondLevelTitle } from "../../common/SecondLevelTitle/SecondLevelTitle";
 import authOperations from "../../redux/Auth/auth-operations";
+import ImgRegister from "../../common/BackgroundImg/ImgRegister/ImgRegister";
 
 import s from "./RegisterView.module.css";
 
@@ -71,6 +72,7 @@ export default function RegisterView() {
         </label>
         <Button type="submit" message="Sign up" className={s.button} />
       </form>
+      <ImgRegister />
     </>
   );
 }

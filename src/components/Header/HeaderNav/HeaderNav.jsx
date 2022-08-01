@@ -1,16 +1,16 @@
-import { memo } from "react";
+// import { memo } from "react";
 import { useSelector } from "react-redux";
 import { NavLink } from "react-router-dom";
 import authSelectors from "../../../redux/Auth/auth-selectors";
 
 import UserMenu from "../UserMenu/UserMenu";
 import AuthNav from "../AuthNav/AuthNav";
-import s from "./Header.module.css";
+import s from "./HeaderNav.module.css";
 
 function Header() {
   const isLoggedIn = useSelector(authSelectors.getIsLoggedIn);
   return (
-    <header className={s.header}>
+    <header className={s.headerContainer}>
       <nav className={s.headerNav}>
         {!isLoggedIn ? (
           <NavLink
@@ -36,4 +36,5 @@ function Header() {
   );
 }
 
-export default memo(Header);
+// export default memo(Header);
+export default Header;

@@ -1,7 +1,3 @@
-.contactsTitle{
-  color: var(--textColorThird);
-  margin-bottom: 10px;
-}
 .list {
   margin: 0;
   list-style: none;
@@ -13,8 +9,9 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
-  width: 100%;
+  min-height: 52px;
   padding: 8px 20px 8px 20px;
+  background-color: var(--backgroundSecond);
   border: 1px solid var(--textColorBtn);
   border-radius: 4px;
   box-shadow: 0 0px 5px 1px var(--textColorBtn);
@@ -22,7 +19,6 @@
 
 .listItemMessage {
   width: 100%;
-  text-align: center;
 }
 
 .listItemText {
