@@ -21,3 +21,12 @@
             right: 30%;
         }
 }
+.lightTheme {
+    composes: imgMain;
+    background-image: url('../../../images/pngegg9.png');
+}
+
+.darkTheme {
+    composes: imgMain;
+    background-image: url('../../../images/pngegg1.png');
+}

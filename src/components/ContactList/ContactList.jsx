@@ -1,11 +1,13 @@
 import PropTypes from "prop-types";
 import { useEffect } from "react";
 import { useDispatch, useSelector } from "react-redux";
+
 import contactsOperations from "../../redux/contactSlice/contactsOperations";
 import contactsSelectors from "../../redux/contactSlice/contactsSelectors";
 
 import Notice from "../../common/Notice/Notice";
 import Button from "../../common/Button/Button";
+import ImgList from "../../common/BackgroundImg/ImgList/ImgList";
 
 import s from "./ContactList.module.css";
 
@@ -55,6 +57,7 @@ const ContactList = () => {
           </li>
         )}
       </ul>
+      <ImgList />
     </>
   );
 };

@@ -1,4 +1,4 @@
-import { useEffect } from "react";
+import { useEffect, useState } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { Switch } from "react-router-dom";
 import { Suspense } from "react";
@@ -18,12 +18,20 @@ import authSelectors from "../../redux/Auth/auth-selectors";
 import Section from "../../common/Section/Section";
 import Container from "../../common/Container/Container";
 
+import { ThemeContext, themes } from "../../common/ThemeSwitcher/themeContext";
+
 const App = () => {
   const dispatch = useDispatch();
   const isFetchingCurrentUser = useSelector(
     authSelectors.getIsFetchingCurrentUser
   );
-  // const isLoggedIn = useSelector(authSelectors.getIsLoggedIn);
+
+  const [theme, setTheme] = useState(themes.dark);
+
+  const toggleTheme = () =>
+    setTheme((prevTheme) =>
+      prevTheme === themes.light ? themes.dark : themes.light
+    );
 
   useEffect(() => {
     dispatch(authOperations.fetchCurrentUser());
@@ -34,41 +42,43 @@ const App = () => {
       {isFetchingCurrentUser ? (
         <h2>loading...</h2>
       ) : (
-        <Suspense>
-          <Header />
-          <Section>
-            <Container>
-              <Switch fallback={<h3>Loading...</h3>}>
-                <PublicRoute exact path="/">
-                  <HomeView />
-                </PublicRoute>
+        <ThemeContext.Provider value={{ theme, toggleTheme }}>
+          <Suspense>
+            <Header />
+            <Section>
+              <Container>
+                <Switch fallback={<h3>Loading...</h3>}>
+                  <PublicRoute exact path="/">
+                    <HomeView />
+                  </PublicRoute>
 
-                <PublicRoute
-                  exact
-                  path="/login"
-                  restricted
-                  redirectTo="/contacts"
-                >
-                  <LoginView />
-                </PublicRoute>
+                  <PublicRoute
+                    exact
+                    path="/login"
+                    restricted
+                    redirectTo="/contacts"
+                  >
+                    <LoginView />
+                  </PublicRoute>
 
-                <PublicRoute
-                  exact
-                  path="/register"
-                  restricted
-                  redirectTo="/contacts"
-                >
-                  <RegisterView />
-                </PublicRoute>
+                  <PublicRoute
+                    exact
+                    path="/register"
+                    restricted
+                    redirectTo="/contacts"
+                  >
+                    <RegisterView />
+                  </PublicRoute>
 
-                <PrivateRoute exact path="/contacts" redirectTo="/login">
-                  <ContactsView />
-                </PrivateRoute>
-              </Switch>
-            </Container>
-          </Section>
-          <Footer />
-        </Suspense>
+                  <PrivateRoute exact path="/contacts" redirectTo="/login">
+                    <ContactsView />
+                  </PrivateRoute>
+                </Switch>
+              </Container>
+            </Section>
+            <Footer />
+          </Suspense>
+        </ThemeContext.Provider>
       )}
     </>
   );

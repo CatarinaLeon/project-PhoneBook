@@ -32,7 +32,7 @@ export default function LoginView() {
 
   return (
     <>
-      <SecondLevelTitle message="Login page" />
+      <SecondLevelTitle message="Login" />
       <form onSubmit={handleSubmit} className={s.form} autoComplete="off">
         <label className={s.label}>
           Mail

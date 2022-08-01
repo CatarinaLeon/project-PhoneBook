@@ -3,6 +3,7 @@
   list-style: none;
   border-radius: 5px;
   gap: 15px;
+  position: relative;
 }
 
 .listItem {

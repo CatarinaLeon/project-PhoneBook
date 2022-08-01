@@ -2,7 +2,16 @@
     padding-top: 45px;
     padding-bottom: 50px;
     min-height: 430px;
-    background-color: var(--backgroundMain);
-    /* background-color: var(--backgroundThird); */
     
+    
+    
+}
+.lightTheme {
+    composes: section;
+    background-color: var(--backgroundThird);
+}
+
+.darkTheme {
+    composes: section;
+    background-color: var(--backgroundMain);
 }

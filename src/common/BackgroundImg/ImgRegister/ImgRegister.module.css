@@ -5,7 +5,7 @@
         height: 204px;
         bottom: 95px;
         right: 63%;
-        background-image: url('../../../images/pngegg2.png');
+        /* background-image: url('../../../images/pngegg2.png'); */
         background-position: center;
         background-repeat: no-repeat;
         background-size: contain;
@@ -24,4 +24,13 @@
     height: 350px;
     right: 68%;
     }
+}
+.lightTheme {
+    composes: imgRegister;
+    background-image: url('../../../images/pngegg11.png');
+}
+
+.darkTheme {
+    composes: imgRegister;
+    background-image: url('../../../images/pngegg2.png');
 }

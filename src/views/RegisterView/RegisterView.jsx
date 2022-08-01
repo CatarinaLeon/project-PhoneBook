@@ -36,7 +36,7 @@ export default function RegisterView() {
 
   return (
     <>
-      <SecondLevelTitle message="Registration page" />
+      <SecondLevelTitle message="Registration" />
       <form onSubmit={handleSubmit} className={s.form} autoComplete="off">
         <label className={s.label}>
           Name

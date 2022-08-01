@@ -1,0 +1,26 @@
+@media screen and (min-width: 768px) {
+    .cat{
+    position: absolute;
+    width: 140px;
+    height: 155px;
+    top: 435px;
+    right: 80px;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: contain;
+}
+.lightTheme {
+    composes: cat;
+    background-image: url('../../../images/pngegg9.png');
+}
+
+.darkTheme {
+    composes: cat;
+    background-image: url('../../../images/pngegg5.png');
+}
+}
+@media screen and (min-width: 950px) {
+    .cat{
+        display: none;
+    }
+}
