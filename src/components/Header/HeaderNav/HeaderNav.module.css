@@ -11,6 +11,9 @@
     font-size: 22px;
     color: var(--textColorMain);
 }
+.activeStyle{
+    color: #fb0000ed;
+}
 
 .headerNav{
     margin: 0 auto;

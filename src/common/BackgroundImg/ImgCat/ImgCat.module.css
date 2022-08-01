@@ -69,21 +69,16 @@
 }
 }
 
-@media screen and (min-width: 1100px) {
-    .cat {
-        width: 250px;
-        height: 320px;
-    }
-}
-
 @media screen and (min-width: 1300px) {
     .cat {
         right: 60px;
+        width: 250px;
+        height: 320px;
     }
     .lightTheme {
         composes: cat;
         height: 400px;
-        bottom: 75px;
+        bottom: 70px;
     }
     
     .darkTheme {

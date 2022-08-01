@@ -3,6 +3,19 @@
     border-radius: 5px;
     background-color: var(--backgroundSecond);
     box-shadow: 0 0 5px 1px var(--textColorBtn);
+    background-position: 10px 95%;
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-size: 100px;
+}
+.lightTheme {
+    composes: homeView;
+    background-image: url(../../images/pngegg16.png);
+}
+
+.darkTheme {
+    composes: homeView;
+    background-image: none;
 }
 .homeText{
     color: var(--textColorMain);

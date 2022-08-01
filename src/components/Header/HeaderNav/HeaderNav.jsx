@@ -21,7 +21,8 @@ function Header() {
             to="/"
             exact
             className={s.headerLink}
-            activeStyle={{ color: "#fb0000ed" }}
+            activeClassName={s.activeStyle}
+            // activeStyle={{ color: "#fb0000ed" }}
           >
             Main
           </NavLink>
@@ -29,7 +30,8 @@ function Header() {
           <NavLink
             to="/contacts"
             className={s.headerLink}
-            activeStyle={{ color: "#fb0000ed" }}
+            activeClassName={s.activeStyle}
+            // activeStyle={{ color: "#fb0000ed" }}
           >
             Contacts
           </NavLink>

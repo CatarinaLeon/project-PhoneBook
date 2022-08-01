@@ -3,20 +3,23 @@
         position: absolute;
         width: 184px;
         height: 204px;
-        bottom: 85px;
         right: 63%;
-        /* background-image: url('../../../images/pngegg3.png'); */
         background-position: center;
         background-repeat: no-repeat;
         background-size: contain;
     }
 }
+.lightTheme {
+    composes: imgLogin;
+    background-image: url('../../../images/pngegg10.png');
+    bottom: 100px;
+}
 
-/* @media screen and (min-width: 768px) {
-    .imgLogin {
-        right: 33%;
-    }
-} */
+.darkTheme {
+    composes: imgLogin;
+    background-image: url('../../../images/pngegg3.png');
+    bottom: 85px;
+}
 
 @media screen and (min-width: 1280px) {
     .imgLogin {
@@ -24,13 +27,13 @@
         height: 350px;
         right: 68%;
     }
-}
-.lightTheme {
-    composes: imgLogin;
-    background-image: url('../../../images/pngegg10.png');
-}
-
-.darkTheme {
-    composes: imgLogin;
-    background-image: url('../../../images/pngegg3.png');
+        .lightTheme {
+            composes: imgLogin;
+            bottom: 70px;
+        }
+    
+        .darkTheme {
+            composes: imgLogin;
+            
+        }
 }
