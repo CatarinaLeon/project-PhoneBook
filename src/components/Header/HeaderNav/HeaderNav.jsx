@@ -1,4 +1,4 @@
-// import { memo } from "react";
+import { memo } from "react";
 import { useSelector } from "react-redux";
 import { NavLink } from "react-router-dom";
 import authSelectors from "../../../redux/Auth/auth-selectors";
@@ -36,5 +36,5 @@ function Header() {
   );
 }
 
-// export default memo(Header);
-export default Header;
+export default memo(Header);
+// export default Header;

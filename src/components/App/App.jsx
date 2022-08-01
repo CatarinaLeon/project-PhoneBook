@@ -61,12 +61,7 @@ const App = () => {
                   <RegisterView />
                 </PublicRoute>
 
-                <PrivateRoute
-                  exact
-                  path="/contacts"
-                  // restrictedredirectTo="/"
-                  redirectTo="/register"
-                >
+                <PrivateRoute exact path="/contacts" redirectTo="/login">
                   <ContactsView />
                 </PrivateRoute>
               </Switch>
