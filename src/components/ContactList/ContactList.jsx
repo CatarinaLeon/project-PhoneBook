@@ -8,10 +8,12 @@ import contactsSelectors from "../../redux/contactSlice/contactsSelectors";
 import Notice from "../../common/Notice/Notice";
 import Button from "../../common/Button/Button";
 import ImgList from "../../common/BackgroundImg/ImgList/ImgList";
+import { useTranslation } from "react-i18next";
 
 import s from "./ContactList.module.css";
 
 const ContactList = () => {
+  const { t } = useTranslation();
   const dispatch = useDispatch();
 
   useEffect(() => {
@@ -33,7 +35,7 @@ const ContactList = () => {
           <>
             {visibleContacts.length === 0 ? (
               <li className={`${s.listItem} ${s.listItemMessage}`}>
-                <Notice message="No contact found with this name" />
+                <Notice message={t("contactList.messageNoName")} />
               </li>
             ) : (
               visibleContacts.map(({ id, name, number }) => (
@@ -41,7 +43,7 @@ const ContactList = () => {
                   <p className={s.listItemText}>{name}</p>
                   <p className={s.listItemTextNumber}>{number} </p>
                   <Button
-                    message="Delete"
+                    message={t("contactList.btn")}
                     name={id}
                     onClick={() =>
                       dispatch(contactsOperations.deleteContact(id))
@@ -53,7 +55,7 @@ const ContactList = () => {
           </>
         ) : (
           <li className={`${s.listItem} ${s.listItemMessage}`}>
-            <Notice message="Contact list is empty" />
+            <Notice message={t("contactList.messageList")} />
           </li>
         )}
       </ul>

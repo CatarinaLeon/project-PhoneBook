@@ -4,6 +4,7 @@ import Button from "../../common/Button/Button";
 import { SecondLevelTitle } from "../../common/SecondLevelTitle/SecondLevelTitle";
 import authOperations from "../../redux/Auth/auth-operations";
 import ImgRegister from "../../common/BackgroundImg/ImgRegister/ImgRegister";
+import { useTranslation } from "react-i18next";
 
 import s from "./RegisterView.module.css";
 
@@ -12,6 +13,7 @@ export default function RegisterView() {
   const [name, setName] = useState("");
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
+  const { t } = useTranslation();
 
   const handleChange = ({ target: { name, value } }) => {
     switch (name) {
@@ -36,41 +38,48 @@ export default function RegisterView() {
 
   return (
     <>
-      <SecondLevelTitle message="Registration" />
+      <SecondLevelTitle message={t("header.authNav.reg")} />
       <form onSubmit={handleSubmit} className={s.form} autoComplete="off">
         <label className={s.label}>
-          Name
+          {t("pages.reg.labelName")}
           <input
             type="text"
             name="name"
             value={name}
+            placeholder={t("pages.reg.placeholderName")}
             onChange={handleChange}
             className={s.input}
           />
         </label>
 
         <label className={s.label}>
-          Mail
+          {t("pages.reg.labelMail")}
           <input
             type="email"
             name="email"
             value={email}
+            placeholder={t("pages.reg.placeholderMail")}
             onChange={handleChange}
             className={s.input}
           />
         </label>
 
         <label className={s.label}>
-          Password
+          {t("pages.reg.labelPass")}
           <input
             type="password"
             name="password"
             value={password}
+            placeholder={t("pages.reg.placeholderPass")}
             onChange={handleChange}
             className={s.input}
           />
         </label>
-        <Button type="submit" message="Sign up" className={s.button} />
+        <Button
+          type="submit"
+          message={t("pages.reg.btn")}
+          className={s.button}
+        />
       </form>
       <ImgRegister />
     </>

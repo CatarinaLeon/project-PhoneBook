@@ -1,0 +1,63 @@
+{
+  "header": {
+    "nav": {
+      "main": "Home",
+      "contacts": "Contacts"
+    },
+    "authNav": {
+      "reg": "Registration",
+      "log": "Log in"
+    },
+    "userMenu": {
+      "welcome": "Hi",
+      "btn": "Exit"
+    }
+  },
+  "pages": {
+    "homeText": "Create your",
+    "homeTitle": "PHONE BOOK",
+    "subtitle": "To use our service",
+    "titleReg": "Register",
+    "titleLog": "Sign in",
+    "subtitleOr": "or",
+    "subtitleAccount": "to your account",
+    "log": {
+      "labelMail": "Email",
+      "placeholderMail": "mail.net@gmail.com",
+      "labelPass": "Password",
+      "placeholderPass": "par@ol",
+      "btn": "Sign in"
+    },
+    "reg": {
+      "labelName": "Name",
+      "placeholderName": "",
+      "labelMail": "Email",
+      "placeholderMail": "mail.net@gmail.com",
+      "labelPass": "Password",
+      "placeholderPass": "par@ol",
+      "btn": "Sign up"
+    }
+  },
+  "phonebook": {
+    "title": "Phone book",
+    "subtitle": "Contacts"
+  },
+  "contactForm": {
+    "placeholder": "Name and surname:",
+    "number": "Phone number:",
+    "button": "Add contact"
+  },
+  "filter": {
+    "label": "Find contact by name",
+    "placeholder": "Name..."
+  },
+  "contactList": {
+    "btn": "delete",
+    "messageNoName": "No contact found with this name",
+    "messageList": "Contact list is empty"
+  },
+  "footer": {
+    "info": "Developed with",
+    "by": "by"
+  }
+}

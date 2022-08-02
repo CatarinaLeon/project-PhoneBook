@@ -10,7 +10,7 @@ const ThemeSwitcher = () => {
         <input
           type="checkbox"
           onChange={toggleTheme}
-          checked={theme === themes.light}
+          checked={theme === themes.dark}
         />
         <span className={`${s.slider} ${s.round}`}></span>
       </label>

@@ -4,6 +4,7 @@ import Button from "../../common/Button/Button";
 import { SecondLevelTitle } from "../../common/SecondLevelTitle/SecondLevelTitle";
 import authOperations from "../../redux/Auth/auth-operations";
 import ImgLogin from "../../common/BackgroundImg/ImgLogin/ImgLogin";
+import { useTranslation } from "react-i18next";
 
 import s from "./LoginView.module.css";
 
@@ -11,6 +12,7 @@ export default function LoginView() {
   const dispatch = useDispatch();
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
+  const { t } = useTranslation();
 
   const handleChange = ({ target: { name, value } }) => {
     switch (name) {
@@ -32,30 +34,37 @@ export default function LoginView() {
 
   return (
     <>
-      <SecondLevelTitle message="Login" />
+      <SecondLevelTitle message={t("header.authNav.log")} />
       <form onSubmit={handleSubmit} className={s.form} autoComplete="off">
         <label className={s.label}>
-          Mail
+          {t("pages.log.labelMail")}
           <input
             type="email"
             name="email"
             value={email}
+            placeholder={t("pages.log.placeholderMail")}
             onChange={handleChange}
             className={s.input}
           />
         </label>
 
         <label className={s.label}>
-          Password
+          {t("pages.log.labelPass")}
+
           <input
             type="password"
             name="password"
             value={password}
+            placeholder={t("pages.log.placeholderPass")}
             onChange={handleChange}
             className={s.input}
           />
         </label>
-        <Button type="submit" message="Sign In" className={s.button} />
+        <Button
+          type="submit"
+          message={t("pages.log.btn")}
+          className={s.button}
+        />
       </form>
       <ImgLogin />
     </>

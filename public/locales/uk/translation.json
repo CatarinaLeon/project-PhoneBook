@@ -1,0 +1,63 @@
+{
+  "header": {
+    "nav": {
+      "main": "Головна",
+      "contacts": "Контакти"
+    },
+    "authNav": {
+      "reg": "Реєстрація",
+      "log": "Увійти"
+    },
+    "userMenu": {
+      "welcome": "Привіт",
+      "btn": "Вийти"
+    }
+  },
+  "pages": {
+    "homeText": "Створіть свою",
+    "homeTitle": "ТЕЛЕФОННУ КНИГУ",
+    "subtitle": "Щоб скористатися нашим сервісом",
+    "titleReg": "Зареєструйтесь",
+    "titleLog": "Увійдіть",
+    "subtitleOr": "або",
+    "subtitleAccount": "на свій обліковий запис",
+    "log": {
+      "labelMail": "Електронна адреса",
+      "placeholderMail": "mail.net@gmail.com",
+      "labelPass": "Пароль",
+      "placeholderPass": "par@ol",
+      "btn": "Увійти"
+    },
+    "reg": {
+      "labelName": "Імʼя користувача",
+      "placeholderName": "",
+      "labelMail": "Електронна адреса",
+      "placeholderMail": "mail.net@gmail.com",
+      "labelPass": "Пароль",
+      "placeholderPass": "par@ol",
+      "btn": "Зареєструватися"
+    }
+  },
+  "phonebook": {
+    "title": "Телефонна книга",
+    "subtitle": "Контакти"
+  },
+  "contactForm": {
+    "placeholder": "Прізвище та імʼя:",
+    "number": "Номер телефону:",
+    "button": "Додати контакт"
+  },
+  "filter": {
+    "label": "Знайти контакт за іменем",
+    "placeholder": "Імʼя..."
+  },
+  "contactList": {
+    "btn": "Видалити",
+    "messageNoName": "Не знайдено контакт з таким іменем",
+    "messageList": "Список контактів порожній"
+  },
+  "footer": {
+    "info": "Розроблено з",
+    "by": ""
+  }
+}

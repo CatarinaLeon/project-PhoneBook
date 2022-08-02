@@ -14,7 +14,14 @@ body {
 }
 
 * {
+  margin: 0;
+  padding: 0;
   text-decoration: none;
+}
+img{
+  display: block;
+  max-width: 100%;
+  height: auto;
 }
 
 ul {

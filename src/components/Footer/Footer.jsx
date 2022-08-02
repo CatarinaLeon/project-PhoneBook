@@ -1,18 +1,15 @@
-// import { useContext } from "react";
-// import { ThemeContext, themes } from "../../common/ThemeSwitcher/themeContext";
 import s from "./Footer.module.css";
 import { ReactComponent as Feart } from "../../images/heart.svg";
+import { useTranslation } from "react-i18next";
 
 const Footer = () => {
-  //   const { theme } = useContext(ThemeContext);
+  const { t } = useTranslation();
+
   return (
-    <footer
-      className={s.footer}
-      //   {theme === themes.light ? s.lightTheme : s.darkTheme}
-    >
-      © 2022 | Developed with
+    <footer className={s.footer}>
+      © 2022 | {t("footer.info")}
       <Feart className={s.footerHeart} />
-      by
+      {t("footer.by")}
       <a href="https://github.com/CatarinaLeon" className={s.footerLink}>
         Catarina Leon
       </a>

@@ -4,23 +4,25 @@ import { ImgMain } from "../../common/BackgroundImg/ImgMain/ImgMain";
 import { useContext } from "react";
 import { ThemeContext, themes } from "../../common/ThemeSwitcher/themeContext";
 import s from "./HomeView.module.css";
-import React from "react";
+import { useTranslation } from "react-i18next";
 
 export default function HomeView() {
+  const { t } = useTranslation();
   const { theme } = useContext(ThemeContext);
+
   return (
     <div className={theme === themes.light ? s.lightTheme : s.darkTheme}>
-      <h2 className={s.homeText}>Create your</h2>
-      <SecondLevelTitle message="PHONE BOOK" />
-      <p className={s.subtitle}>To use our service</p>
+      <h2 className={s.homeText}>{t("pages.homeText")}</h2>
+      <SecondLevelTitle message={t("pages.homeTitle")} />
+      <p className={s.subtitle}>{t("pages.subtitle")}</p>
       <NavLink to="/register" className={s.link}>
-        Register
+        {t("pages.titleReg")}
       </NavLink>
-      <p className={s.subtitle}>or</p>
+      <p className={s.subtitle}>{t("pages.subtitleOr")}</p>
       <NavLink to="/login" className={s.link}>
-        Sign in
+        {t("pages.titleLog")}
       </NavLink>
-      <p className={s.subtitle}>to your account</p>
+      <p className={s.subtitle}>{t("pages.subtitleAccount")}</p>
       <ImgMain />
     </div>
   );

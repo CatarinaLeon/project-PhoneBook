@@ -48,8 +48,7 @@
 }
 .catHanging{
     position: absolute;
-    width: 155px;
-    height: 170px;
+    
     background-repeat: no-repeat;
     background-position: center;
     background-size: contain;
@@ -59,16 +58,24 @@
     background-image: url('../../../images/pngegg7.png');
     right: 5%;
     top: 90px;
+    width: 155px;
+    height: 170px;
 }
 
 .darkThemeCat {
     composes: catHanging;
     background-image: url('../../../images/pngegg6.png');
-    left: 20%;
-    bottom: 1px;
+    left: 17%;
+    top: 110px;
+    width: 150px;
+    height: 310px;
 }
 }
-
+@media screen and (min-width: 1150px) {
+.darkThemeCat {
+    left: 25%;
+}
+}
 @media screen and (min-width: 1300px) {
     .cat {
         right: 60px;
@@ -84,5 +91,13 @@
     .darkTheme {
         composes: cat;
         bottom: 105px;
+    }
+    .darkThemeCat {
+        left: 27%;
+    }
+}
+@media screen and (min-width: 1630px) {
+.darkThemeCat {
+        left: 32%;
     }
 }

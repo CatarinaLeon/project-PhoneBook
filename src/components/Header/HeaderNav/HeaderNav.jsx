@@ -1,21 +1,20 @@
-import { memo } from "react";
+// import { memo } from "react";
 import { useSelector } from "react-redux";
 import { NavLink } from "react-router-dom";
 import authSelectors from "../../../redux/Auth/auth-selectors";
 // import { useContext } from "react";
-import ThemeSwitcher from "../../../common/ThemeSwitcher/ThemeSwitcher";
+// import ThemeSwitcher from "../../../common/ThemeSwitcher/ThemeSwitcher";
 // import { ThemeContext, themes } from "../../common/ThemeSwitcher/themeContext";
 
 import UserMenu from "../UserMenu/UserMenu";
 import AuthNav from "../AuthNav/AuthNav";
 import s from "./HeaderNav.module.css";
 
-function Header() {
+function HeaderNav() {
   const isLoggedIn = useSelector(authSelectors.getIsLoggedIn);
   return (
-    <header className={s.headerContainer}>
-      <ThemeSwitcher />
-      <nav className={s.headerNav}>
+    <header className={s.header}>
+      <div className={s.headerNav}>
         {!isLoggedIn ? (
           <NavLink
             to="/"
@@ -37,9 +36,10 @@ function Header() {
           </NavLink>
         )}
         {!isLoggedIn ? <AuthNav /> : <UserMenu />}
-      </nav>
+      </div>
     </header>
   );
 }
 
-export default memo(Header);
+export default HeaderNav;
+// export default memo(HeaderNav);

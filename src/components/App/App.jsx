@@ -3,7 +3,9 @@ import { useDispatch, useSelector } from "react-redux";
 import { Switch } from "react-router-dom";
 import { Suspense } from "react";
 
-import Header from "../Header/HeaderNav/HeaderNav";
+// import HeaderNav from "../Header/HeaderNav/HeaderNav";
+
+import AppNav from "../AppNav/AppNav";
 
 import HomeView from "../../views/HomeView/HomeView";
 import RegisterView from "../../views/RegisterView/RegisterView";
@@ -19,6 +21,8 @@ import Section from "../../common/Section/Section";
 import Container from "../../common/Container/Container";
 
 import { ThemeContext, themes } from "../../common/ThemeSwitcher/themeContext";
+// import { useLocalStorage } from "react-use";
+// const STORAGE = "theme";
 
 const App = () => {
   const dispatch = useDispatch();
@@ -26,7 +30,8 @@ const App = () => {
     authSelectors.getIsFetchingCurrentUser
   );
 
-  const [theme, setTheme] = useState(themes.dark);
+  // const [theme, setTheme] = useLocalStorage(STORAGE, themes.light);
+  const [theme, setTheme] = useState(themes.light);
 
   const toggleTheme = () =>
     setTheme((prevTheme) =>
@@ -43,8 +48,9 @@ const App = () => {
         <h2>loading...</h2>
       ) : (
         <ThemeContext.Provider value={{ theme, toggleTheme }}>
-          <Suspense>
-            <Header />
+          <Suspense fallback={<h3>Loading...</h3>}>
+            {/* <HeaderNav /> */}
+            <AppNav />
             <Section>
               <Container>
                 <Switch fallback={<h3>Loading...</h3>}>
