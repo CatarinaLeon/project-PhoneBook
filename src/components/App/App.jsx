@@ -4,8 +4,8 @@ import { Switch } from "react-router-dom";
 import { Suspense } from "react";
 
 // import HeaderNav from "../Header/HeaderNav/HeaderNav";
-
-import AppNav from "../AppNav/AppNav";
+import HeaderNav from "../Header/HeaderNav/HeaderNav";
+// import AppNav from "../AppNav/AppNav";
 
 import HomeView from "../../views/HomeView/HomeView";
 import RegisterView from "../../views/RegisterView/RegisterView";
@@ -50,7 +50,8 @@ const App = () => {
         <ThemeContext.Provider value={{ theme, toggleTheme }}>
           <Suspense fallback={<h3>Loading...</h3>}>
             {/* <HeaderNav /> */}
-            <AppNav />
+            {/* <AppNav /> */}
+            <HeaderNav />
             <Section>
               <Container>
                 <Switch fallback={<h3>Loading...</h3>}>
