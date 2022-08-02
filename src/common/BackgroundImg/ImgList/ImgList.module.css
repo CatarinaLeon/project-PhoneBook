@@ -3,7 +3,6 @@
     position: absolute;
     width: 140px;
     height: 155px;
-    top: 435px;
     right: 80px;
     background-position: center;
     background-repeat: no-repeat;
@@ -12,11 +11,13 @@
 .lightTheme {
     composes: cat;
     background-image: url('../../../images/pngegg9.png');
+    top: 450px;
 }
 
 .darkTheme {
     composes: cat;
     background-image: url('../../../images/pngegg5.png');
+    top: 438px;
 }
 }
 @media screen and (min-width: 950px) {
