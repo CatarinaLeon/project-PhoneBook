@@ -1,18 +1,20 @@
 import { useState } from "react";
 import { useDispatch } from "react-redux";
-import Button from "../../common/Button/Button";
-import { SecondLevelTitle } from "../../common/SecondLevelTitle/SecondLevelTitle";
-import authOperations from "../../redux/Auth/auth-operations";
-import ImgRegister from "../../common/BackgroundImg/ImgRegister/ImgRegister";
 import { useTranslation } from "react-i18next";
+import authOperations from "../../redux/Auth/auth-operations";
+
+import SecondLevelTitle from "../../common/SecondLevelTitle/SecondLevelTitle";
+import Button from "../../common/Button/Button";
+import ImgRegister from "../../common/BackgroundImg/ImgRegister/ImgRegister";
 
 import s from "./RegisterView.module.css";
 
 export default function RegisterView() {
-  const dispatch = useDispatch();
   const [name, setName] = useState("");
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
+
+  const dispatch = useDispatch();
   const { t } = useTranslation();
 
   const handleChange = ({ target: { name, value } }) => {

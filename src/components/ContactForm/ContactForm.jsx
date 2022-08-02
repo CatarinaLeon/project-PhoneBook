@@ -1,13 +1,13 @@
 import { useState } from "react";
 import { useDispatch, useSelector } from "react-redux";
-import Button from "../../common/Button/Button";
-import contactsOperations from "../../redux/contactSlice/contactsOperations";
-import contactsSelectors from "../../redux/contactSlice/contactsSelectors";
 import { useTranslation } from "react-i18next";
+import contactsSelectors from "../../redux/contactSlice/contactsSelectors";
+import contactsOperations from "../../redux/contactSlice/contactsOperations";
+import Button from "../../common/Button/Button";
 
 import s from "./ContactForm.module.css";
 
-const ContactForm = () => {
+export default function ContactForm() {
   const [name, setName] = useState("");
   const [number, setNumber] = useState("");
   const { t } = useTranslation();
@@ -82,6 +82,4 @@ const ContactForm = () => {
       />
     </form>
   );
-};
-
-export default ContactForm;
+}

@@ -1,5 +1,6 @@
 .homeView {
     padding: 30px 40px;
+    margin-top: 20px;
     border-radius: 5px;
     background-color: var(--backgroundSecond);
     box-shadow: 0 0 5px 1px var(--textColorBtn);
@@ -10,7 +11,7 @@
 }
 .lightTheme {
     composes: homeView;
-    background-image: url(../../images/pngegg16.png);
+    background-image: url(../../images/pngegg12.png);
 }
 
 .darkTheme {

@@ -1,8 +1,8 @@
-import s from "./Footer.module.css";
-import { ReactComponent as Feart } from "../../images/heart.svg";
 import { useTranslation } from "react-i18next";
+import { ReactComponent as Feart } from "../../images/heart.svg";
+import s from "./Footer.module.css";
 
-const Footer = () => {
+export default function Footer() {
   const { t } = useTranslation();
 
   return (
@@ -15,5 +15,4 @@ const Footer = () => {
       </a>
     </footer>
   );
-};
-export default Footer;
+}

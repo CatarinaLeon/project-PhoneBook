@@ -2,9 +2,9 @@ import PropTypes from "prop-types";
 import s from "./Button.module.css";
 
 export default function Button({
-  message,
   onClick = () => {},
   type = "button",
+  message,
   className,
 }) {
   return (

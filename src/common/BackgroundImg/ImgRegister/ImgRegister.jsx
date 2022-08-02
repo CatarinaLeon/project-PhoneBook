@@ -1,6 +1,6 @@
-import s from "./ImgRegister.module.css";
 import { useContext } from "react";
 import { ThemeContext, themes } from "../../ThemeSwitcher/themeContext";
+import s from "./ImgRegister.module.css";
 
 export default function ImgRegister() {
   const { theme } = useContext(ThemeContext);

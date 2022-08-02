@@ -9,7 +9,7 @@
 
 .footerHeart{
     margin: 0 10px;
-    fill: red;
+    fill: var(--textColorThird);
     animation: heartbeating 2s infinite;
 }
 @keyframes heartbeating {
@@ -39,14 +39,3 @@
     transform: scale(1.08);
     transition-duration: 800ms;
 }
-
-/* .lightTheme {
-    composes: footer;
-    background-color: var(--backgroundColorSecond);
-
-}
-
-.darkTheme {
-    composes: footer;
-    background-color: var(--backgroundColorThird);
-} */

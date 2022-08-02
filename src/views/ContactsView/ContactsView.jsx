@@ -1,10 +1,11 @@
+import { useTranslation } from "react-i18next";
 import ContactForm from "../../components/ContactForm/ContactForm";
 import ContactList from "../../components/ContactList/ContactList";
-import ImgCat from "../../common/BackgroundImg/ImgCat/ImgCat";
 import SearchFilter from "../../components/SearchFilter/SearchFilter";
+import SecondLevelTitle from "../../common/SecondLevelTitle/SecondLevelTitle";
+import ImgCat from "../../common/BackgroundImg/ImgCat/ImgCat";
+
 import s from "./ContactsView.module.css";
-import { SecondLevelTitle } from "../../common/SecondLevelTitle/SecondLevelTitle";
-import { useTranslation } from "react-i18next";
 
 export default function ContactsView() {
   const { t } = useTranslation();

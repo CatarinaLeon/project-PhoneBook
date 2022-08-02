@@ -11,13 +11,13 @@
 .lightTheme {
     composes: cat;
     background-image: url('../../../images/pngegg9.png');
-    top: 450px;
+    top: 435px;
 }
 
 .darkTheme {
     composes: cat;
     background-image: url('../../../images/pngegg5.png');
-    top: 438px;
+    top: 426px;
 }
 }
 @media screen and (min-width: 950px) {

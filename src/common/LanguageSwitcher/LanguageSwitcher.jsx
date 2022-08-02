@@ -1,16 +1,14 @@
 import { useTranslation } from "react-i18next";
-import s from "./LanguageSwitcher.module.css";
 import ukrFlagIcon from "../../images/ukrainian.png";
-// import rusFlagIcon from "../../images/russian.png";
 import ukFlagIcon from "../../images/english.png";
+import s from "./LanguageSwitcher.module.css";
 
 const languages = {
   en: { icon: ukFlagIcon, nativeName: "English" },
   uk: { icon: ukrFlagIcon, nativeName: "Українська" },
-  // ru: { icon: rusFlagIcon, nativeName: "Русский" },
 };
 
-const LanguageSwitcher = () => {
+export default function LanguageSwitcher() {
   const { i18n } = useTranslation();
 
   return (
@@ -32,6 +30,4 @@ const LanguageSwitcher = () => {
       ))}
     </div>
   );
-};
-
-export default LanguageSwitcher;
+}

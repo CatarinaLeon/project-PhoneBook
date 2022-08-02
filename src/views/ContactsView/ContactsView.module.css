@@ -2,5 +2,5 @@
     margin-bottom: 30px;
     font-weight: 700;
     font-size: 40px;
-    color: #fb0000ed;
+    color: var(--textColorThird);
 }

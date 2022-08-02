@@ -1,15 +1,16 @@
 import { useDispatch, useSelector } from "react-redux";
+import { useTranslation } from "react-i18next";
 import authSelectors from "../../../redux/Auth/auth-selectors";
 import authOperations from "../../../redux/Auth/auth-operations";
+import Button from "../../../common/Button/Button";
 
 import s from "./UserMenu.module.css";
-import Button from "../../../common/Button/Button";
-import { useTranslation } from "react-i18next";
 
 export default function UserMenu() {
-  const { t } = useTranslation();
-  const dispatch = useDispatch();
   const userEmail = useSelector(authSelectors.getUserEmail);
+  const { t } = useTranslation();
+
+  const dispatch = useDispatch();
 
   return (
     <div className={s.container}>

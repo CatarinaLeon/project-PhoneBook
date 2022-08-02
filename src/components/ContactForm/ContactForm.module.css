@@ -3,7 +3,7 @@
   padding: 30px 40px;
   border-radius: 5px;
   text-align: center;
-  background-color: #98e3b7;
+  background-color: var(--backgroundSecond);
   box-shadow: 0 0 5px 1px var(--textColorBtn);
 }
 
@@ -11,20 +11,24 @@
   width: 300px;
   margin-bottom: 10px;
   border-radius: 5px;
-  background-color: #f6f3e0;
+  background-color: var(--backgroundThird);
   padding: 8px 20px;
   border: 1px solid var(--textColorBtn);
+  transition-duration: 1000ms;
 }
 .contactInput:hover, 
 .contactInput:focus{
 box-shadow: 0 0 5px 1px var(--backgroundMain);
+transition-duration: 1000ms;
 }
 
 .contactBtn {
   margin: 0 auto;
+  transition-duration: 1000ms;
 }
 
 .contactBtn:hover {
   background-color: var(--textColorBtn);
   box-shadow: 0 0 5px 1px var(--backgroundMain);
+  transition-duration: 1000ms;
 }

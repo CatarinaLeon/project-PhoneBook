@@ -1,8 +1,9 @@
 import { useContext } from "react";
 import { ThemeContext, themes } from "../../common/ThemeSwitcher/themeContext";
+
 import s from "./ThemeSwitcher.module.css";
 
-const ThemeSwitcher = () => {
+export default function ThemeSwitcher() {
   const { theme, toggleTheme } = useContext(ThemeContext);
   return (
     <div className={s.conteiner}>
@@ -16,5 +17,4 @@ const ThemeSwitcher = () => {
       </label>
     </div>
   );
-};
-export default ThemeSwitcher;
+}

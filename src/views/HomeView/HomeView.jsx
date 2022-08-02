@@ -1,10 +1,12 @@
-import { NavLink } from "react-router-dom";
-import { SecondLevelTitle } from "../../common/SecondLevelTitle/SecondLevelTitle";
-import { ImgMain } from "../../common/BackgroundImg/ImgMain/ImgMain";
 import { useContext } from "react";
-import { ThemeContext, themes } from "../../common/ThemeSwitcher/themeContext";
-import s from "./HomeView.module.css";
+import { NavLink } from "react-router-dom";
 import { useTranslation } from "react-i18next";
+
+import SecondLevelTitle from "../../common/SecondLevelTitle/SecondLevelTitle";
+import { ThemeContext, themes } from "../../common/ThemeSwitcher/themeContext";
+import ImgMain from "../../common/BackgroundImg/ImgMain/ImgMain";
+
+import s from "./HomeView.module.css";
 
 export default function HomeView() {
   const { t } = useTranslation();

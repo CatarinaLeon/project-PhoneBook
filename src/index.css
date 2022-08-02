@@ -1,12 +1,10 @@
 @import-normalize;
 
 @import url("https://fonts.googleapis.com/css2?family=Montserrat+Alternates:wght@400;500&display=swap");
-@import url('https://fonts.googleapis.com/css2?family=Lobster+Two:wght@400;700&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Great+Vibes&display=swap');
 
 body {
   font-family: "Montserrat Alternates", sans-serif;
-  /* font-family: 'Lobster Two', cursive; */
   font-weight: 400;
   color: black;
   margin: 0;
@@ -39,6 +37,7 @@ li {
 input {
   outline: none;
   border: none;
+  font-family: inherit;
 }
 p,
 h1,

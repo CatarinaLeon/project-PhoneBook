@@ -1,6 +1,6 @@
-import s from "./ImgCat.module.css";
 import { useContext } from "react";
 import { ThemeContext, themes } from "../../ThemeSwitcher/themeContext";
+import s from "./ImgCat.module.css";
 
 export default function ImgCat() {
   const { theme } = useContext(ThemeContext);

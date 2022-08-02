@@ -1,11 +1,8 @@
-import { useEffect, useState } from "react";
-import { useDispatch, useSelector } from "react-redux";
+import { useEffect, useState, Suspense } from "react";
 import { Switch } from "react-router-dom";
-import { Suspense } from "react";
+import { useDispatch, useSelector } from "react-redux";
 
-// import HeaderNav from "../Header/HeaderNav/HeaderNav";
 import HeaderNav from "../Header/HeaderNav/HeaderNav";
-// import AppNav from "../AppNav/AppNav";
 
 import HomeView from "../../views/HomeView/HomeView";
 import RegisterView from "../../views/RegisterView/RegisterView";
@@ -13,24 +10,23 @@ import LoginView from "../../views/LoginView/LoginView";
 import ContactsView from "../../views/ContactsView/ContactsView";
 import PrivateRoute from "../PrivateRoute/PrivateRoute";
 import PublicRoute from "../PublicRoute/PublicRoute";
-import Footer from "../Footer/Footer";
 
 import authOperations from "../../redux/Auth/auth-operations";
 import authSelectors from "../../redux/Auth/auth-selectors";
+
 import Section from "../../common/Section/Section";
 import Container from "../../common/Container/Container";
+import Footer from "../Footer/Footer";
 
 import { ThemeContext, themes } from "../../common/ThemeSwitcher/themeContext";
-// import { useLocalStorage } from "react-use";
-// const STORAGE = "theme";
 
 const App = () => {
-  const dispatch = useDispatch();
   const isFetchingCurrentUser = useSelector(
     authSelectors.getIsFetchingCurrentUser
   );
 
-  // const [theme, setTheme] = useLocalStorage(STORAGE, themes.light);
+  const dispatch = useDispatch();
+
   const [theme, setTheme] = useState(themes.light);
 
   const toggleTheme = () =>
@@ -49,8 +45,6 @@ const App = () => {
       ) : (
         <ThemeContext.Provider value={{ theme, toggleTheme }}>
           <Suspense fallback={<h3>Loading...</h3>}>
-            {/* <HeaderNav /> */}
-            {/* <AppNav /> */}
             <HeaderNav />
             <Section>
               <Container>

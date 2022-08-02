@@ -20,11 +20,13 @@
     background-color: var(--backgroundThird);
     padding: 8px 20px;
     border: 1px solid var(--textColorBtn);
+    transition-duration: 1000ms;
 }
 
 .input:hover,
 .input:focus {
     box-shadow: 0 0 5px 1px var(--backgroundMain);
+    transition-duration: 1000ms;
 }
 
 .button {

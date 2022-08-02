@@ -1,6 +1,6 @@
-import s from "./ImgLodin.module.css";
 import { useContext } from "react";
 import { ThemeContext, themes } from "../../ThemeSwitcher/themeContext";
+import s from "./ImgLodin.module.css";
 
 export default function ImgLogin() {
   const { theme } = useContext(ThemeContext);

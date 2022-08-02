@@ -1,13 +1,15 @@
 import { useDispatch, useSelector } from "react-redux";
+import { useTranslation } from "react-i18next";
 import contactsSelectors from "../../redux/contactSlice/contactsSelectors";
 import { changeFilter } from "../../redux/contactSlice/contactsActions";
-import s from "./SearchFilter.module.css";
-import { useTranslation } from "react-i18next";
 
-function SearchFilter() {
+import s from "./SearchFilter.module.css";
+
+export default function SearchFilter() {
   const filterValue = useSelector((state) =>
     contactsSelectors.getFilter(state)
   );
+
   const dispatch = useDispatch();
   const { t } = useTranslation();
 
@@ -27,5 +29,3 @@ function SearchFilter() {
     </form>
   );
 }
-
-export default SearchFilter;

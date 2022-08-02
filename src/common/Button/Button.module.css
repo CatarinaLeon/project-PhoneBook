@@ -9,12 +9,14 @@
     color: var(--textColorBtn);
     border-radius: 5px;
     border: 1px solid var(--textColorBtn);
+    transition-duration: 1000ms;
 }
 .button:hover{
     color: var(--textColorSecond);
     background-color: var(--textColorThird);
     border: 1px solid var(--textColorBtn);
     box-shadow: 0 0 5px 1px var(--textColorBtn);
+    transition-duration: 1000ms;
 }
 @media screen and (min-width: 480px) {
     .button {
