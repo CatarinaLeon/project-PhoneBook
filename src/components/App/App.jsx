@@ -16,6 +16,7 @@ import authSelectors from "../../redux/Auth/auth-selectors";
 
 import Section from "../../common/Section/Section";
 import Container from "../../common/Container/Container";
+import Loader from "../../common/Loader/Loader";
 import Footer from "../Footer/Footer";
 
 import { ThemeContext, themes } from "../../common/ThemeSwitcher/themeContext";
@@ -41,14 +42,14 @@ const App = () => {
   return (
     <>
       {isFetchingCurrentUser ? (
-        <h2>loading...</h2>
+        <Loader />
       ) : (
         <ThemeContext.Provider value={{ theme, toggleTheme }}>
-          <Suspense fallback={<h3>Loading...</h3>}>
+          <Suspense fallback={<Loader />}>
             <HeaderNav />
             <Section>
               <Container>
-                <Switch fallback={<h3>Loading...</h3>}>
+                <Switch fallback={<Loader />}>
                   <PublicRoute exact path="/">
                     <HomeView />
                   </PublicRoute>
