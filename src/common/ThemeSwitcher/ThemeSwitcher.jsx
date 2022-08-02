@@ -6,7 +6,7 @@ import s from "./ThemeSwitcher.module.css";
 export default function ThemeSwitcher() {
   const { theme, toggleTheme } = useContext(ThemeContext);
   return (
-    <div className={s.conteiner}>
+    <div className={s.container}>
       <label className={s.switch}>
         <input
           type="checkbox"
