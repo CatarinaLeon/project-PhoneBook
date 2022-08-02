@@ -6,7 +6,7 @@ import s from "./ThemeSwitcher.module.css";
 export default function ThemeSwitcher() {
   const { theme, toggleTheme } = useContext(ThemeContext);
   return (
-    <div className={s.container}>
+    <form className={s.themeBox}>
       <label className={s.switch}>
         <input
           type="checkbox"
@@ -15,6 +15,6 @@ export default function ThemeSwitcher() {
         />
         <span className={`${s.slider} ${s.round}`}></span>
       </label>
-    </div>
+    </form>
   );
 }

@@ -52,7 +52,7 @@
     "placeholder": "Name..."
   },
   "contactList": {
-    "btn": "delete",
+    "btn": "Delete",
     "messageNoName": "No contact found with this name",
     "messageList": "Contact list is empty"
   },
