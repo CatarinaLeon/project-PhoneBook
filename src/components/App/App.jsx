@@ -20,6 +20,7 @@ import Loader from "../../common/Loader/Loader";
 import Footer from "../Footer/Footer";
 
 import { ThemeContext, themes } from "../../common/ThemeSwitcher/themeContext";
+import * as storage from "../../services/localStorage";
 
 const App = () => {
   const isFetchingCurrentUser = useSelector(
@@ -28,7 +29,14 @@ const App = () => {
 
   const dispatch = useDispatch();
 
-  const [theme, setTheme] = useState(themes.light);
+  const [theme, setTheme] = useState(
+    () => storage.get("theme") ?? themes.light
+  );
+
+  //локал сторадж
+  useEffect(() => {
+    storage.save("theme", theme);
+  }, [theme]);
 
   const toggleTheme = () =>
     setTheme((prevTheme) =>
