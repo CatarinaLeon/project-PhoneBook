@@ -23,29 +23,31 @@
 }
 
 .listItemText {
-  font-size: 19px;
+  font-size: 16px;
   text-align: start;
 }
 .listItemTextNumber {
-  font-size: 19px;
+  font-size: 16px;
   text-align: start;
 }
 
 @media screen and (min-width: 480px) {
   .listItemText {
-    width: 150px;
+    width: 180px;
   }
   .listItemTextNumber {
-    width: 195px;
+    width: 140px;
   }
 }
 
 @media screen and (min-width: 768px) {
   .listItemText {
-    width: 265px;
+    width: 300px;
+    font-size: 19px;
   }
   .listItemTextNumber {
     width: 155px;
+    font-size: 19px;
   }
 }
 

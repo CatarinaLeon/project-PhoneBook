@@ -22,13 +22,20 @@
     color: var(--textColorMain);
     margin-bottom: 30px;
 }
+
 .subtitle {
-    width: 450px;
+    width: 225px;
     margin: 0 auto;
     font-weight: 700;
-    font-size: 24px;
+    font-size: 20px;
     text-align: center;
     color: var(--textColorMain);
+}
+@media screen and (min-width: 768px) {
+    .subtitle {
+        width: 450px;
+        font-size: 24px;
+    }
 }
 
 .link {

@@ -1,3 +1,10 @@
+.switch {
+    position: relative;
+    display: inline-block;
+    width: 44px;
+    height: 20px;
+}
+
 .themeBox {
     position: absolute;
     top: 100px;
@@ -9,16 +16,11 @@
         left: 170px;
     }
 }
+
 @media screen and (min-width: 1280px) {
     .themeBox {
         top: 30px;
     }
-}
-.switch {
-    position: relative;
-    display: inline-block;
-    width: 44px;
-    height: 20px;
 }
 
 /* Hide default HTML checkbox */
@@ -61,7 +63,7 @@
 }
 
 .switch input:checked+.slider {
-    background-color:#444;
+    background-color: #444;
 }
 
 .switch input:focus+.slider {
@@ -87,8 +89,3 @@
 .slider.round:before {
     border-radius: 50%;
 }
-/* .container{
-    position: absolute;
-    top: 100px;
-    left: 130px;
-} */
