@@ -30,7 +30,7 @@
     },
     "reg": {
       "labelName": "Name",
-      "placeholderName": "",
+      "placeholderName": "name",
       "labelMail": "Email",
       "placeholderMail": "mail.net@gmail.com",
       "labelPass": "Password",

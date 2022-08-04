@@ -6,7 +6,7 @@
     },
     "authNav": {
       "reg": "Реєстрація",
-      "log": "Увійти"
+      "log": "Вхід"
     },
     "userMenu": {
       "welcome": "Привіт",
@@ -30,9 +30,9 @@
     },
     "reg": {
       "labelName": "Імʼя користувача",
-      "placeholderName": "",
+      "placeholderName": "імʼя",
       "labelMail": "Електронна адреса",
-      "placeholderMail": "mail.net@gmail.com",
+      "placeholderMail": "name.net@gmail.com",
       "labelPass": "Пароль",
       "placeholderPass": "par@ol",
       "btn": "Зареєструватися"

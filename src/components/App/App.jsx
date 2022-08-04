@@ -33,7 +33,7 @@ const App = () => {
     () => storage.get("theme") ?? themes.light
   );
 
-  //локал сторадж
+  //localStorage
   useEffect(() => {
     storage.save("theme", theme);
   }, [theme]);
