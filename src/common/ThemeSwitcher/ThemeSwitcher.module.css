@@ -37,7 +37,7 @@
     -webkit-transition: 0.4s;
     transition: 0.4s;
     box-shadow: 0 0px 15px #2020203d;
-    background: white url('../../images/sunny.png');
+    background: white url('../../images/theme-sunny.png');
     background-repeat: no-repeat;
     background-position: center;
     background-size: 30px;
@@ -56,7 +56,7 @@
     -ms-transform: translateX(24px);
     transform: translateX(11px);
     width: 20x;
-    background: white url('../../images/moon.svg');
+    background: white url('../../images/theme-moon.svg');
     background-repeat: no-repeat;
     background-position: center;
     background-size: 26px;

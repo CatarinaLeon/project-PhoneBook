@@ -64,11 +64,7 @@
 
 .darkThemeCat {
     composes: catHanging;
-    background-image: url('../../../images/pngegg6.png');
-    left: 17%;
-    top: 99px;
-    width: 150px;
-    height: 310px;
+    background-image: none;
 }
 }
 @media screen and (min-width: 1150px) {

@@ -1,11 +1,11 @@
 import { useTranslation } from "react-i18next";
-import ukrFlagIcon from "../../images/ukrainian.png";
-import ukFlagIcon from "../../images/english.png";
+import ukFlagIcon from "../../images/flag-ukrainian.png";
+import enFlagIcon from "../../images/flag-english.png";
 import s from "./LanguageSwitcher.module.css";
 
 const languages = {
-  en: { icon: ukFlagIcon, nativeName: "English" },
-  uk: { icon: ukrFlagIcon, nativeName: "Українська" },
+  en: { icon: enFlagIcon, nativeName: "English" },
+  uk: { icon: ukFlagIcon, nativeName: "Українська" },
 };
 
 export default function LanguageSwitcher() {
