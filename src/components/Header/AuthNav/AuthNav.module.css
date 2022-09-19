@@ -2,12 +2,27 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
-    min-width: 250px;
+    min-width: 140px;
 }
 .link {
     display: inline-block;
     text-decoration: none;
     font-weight: 700;
-    font-size: 22px;
+    font-size: 14px;
     color: var(--textColorMain);
 };
+
+@media screen and (max-width: 480px) {
+.link {
+    font-size: 14px;
+}
+}
+
+@media screen and (min-width: 480px) {
+.navContainer {
+    min-width: 250px;
+}
+.link {
+    font-size: 22px;
+}
+}

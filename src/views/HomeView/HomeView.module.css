@@ -1,9 +1,59 @@
 .homeView {
-    padding: 30px 40px;
-    margin-top: 20px;
     border-radius: 5px;
     background-color: var(--backgroundSecond);
     box-shadow: 0 0 5px 1px var(--textColorBtn);
+}
+
+.homeText {
+    color: var(--textColorMain);
+}
+
+.subtitle {
+    width: 195px;
+    margin: 0 auto;
+    font-weight: 700;
+    text-align: center;
+    color: var(--textColorMain);
+}
+
+.link {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /* height: 45px; */
+    font-weight: 700;
+    color: var(--textColorThird);
+}
+
+@media screen and (max-width: 480px) {
+.homeView {
+    padding: 30px 20px;
+    margin-top: 20px;
+    }
+.homeText {
+    margin-bottom: 20px;
+    font-size: 16px;
+    line-height: 20px;
+}
+.homeTitle{
+    font-size: 18px;
+    line-height: 22px;
+    margin-bottom: 20px;
+}
+.subtitle {
+    font-size: 16px;
+    line-height: 20px;
+}
+.link {
+    font-size: 18px;
+    line-height: 40px;
+}
+}
+
+@media screen and (min-width: 480px) {
+.homeView {
+    padding: 30px 40px;
+    margin-top: 20px;
     background-position: 10px 95%;
     background-repeat: no-repeat;
     background-size: contain;
@@ -11,39 +61,35 @@
 }
 .lightTheme {
     composes: homeView;
-    background-image: url(../../images/pngegg12.png);
+    background-image: url(../../images/pngegg12.avif);
 }
-
 .darkTheme {
     composes: homeView;
     background-image: none;
 }
-.homeText{
-    color: var(--textColorMain);
+.homeText {
     margin-bottom: 30px;
 }
-
+.homeTitle {
+    font-size: 34px;
+    line-height: 38px;
+    margin-bottom: 30px;
+}
 .subtitle {
     width: 225px;
-    margin: 0 auto;
-    font-weight: 700;
     font-size: 20px;
-    text-align: center;
-    color: var(--textColorMain);
+    line-height: 24px;
 }
+.link {
+    font-size: 22px;
+    line-height: 60px;
+}
+}
+
 @media screen and (min-width: 768px) {
     .subtitle {
         width: 450px;
         font-size: 24px;
+        line-height: 28px;
     }
-}
-
-.link {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 45px;
-    font-weight: 700;
-    font-size: 22px;
-    color: var(--textColorThird);
 }

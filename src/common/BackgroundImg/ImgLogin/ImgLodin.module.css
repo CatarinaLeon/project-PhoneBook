@@ -11,13 +11,13 @@
 }
 .lightTheme {
     composes: imgLogin;
-    background-image: url('../../../images/pngegg10.png');
+    background-image: url('../../../images/pngegg10.avif');
     bottom: 100px;
 }
 
 .darkTheme {
     composes: imgLogin;
-    background-image: url('../../../images/pngegg3.png');
+    background-image: url('../../../images/pngegg3.avif');
     bottom: 85px;
 }
 

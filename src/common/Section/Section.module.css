@@ -1,20 +1,28 @@
 .section {
     padding-top: 50px;
     padding-bottom: 50px;
-    min-height: 500px;
-    
-}
-
-.lightTheme {
-    composes: section;
-    background-color: var(--backgroundThird);
-    background-image: url('../../images/background-yellow-green.webp');
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-attachment: fixed;
+    min-height: 60vh;
 }
 
 .darkTheme {
     composes: section;
     background-color: var(--backgroundMain);
+}
+
+@media screen and (max-width: 480px) {
+.lightTheme {
+        composes: section;
+        background-color: var(--backgroundThird);
+    }
+}
+
+@media screen and (min-width: 480px) {
+.lightTheme {
+        composes: section;
+        background-color: var(--backgroundThird);
+        background-image: url('../../images/background-yellow-green.avif');
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-attachment: fixed;
+    }
 }

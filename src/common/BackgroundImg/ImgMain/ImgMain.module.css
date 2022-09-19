@@ -5,7 +5,7 @@
     height: 240px;
     bottom: 97px;
     right: 0%;
-    background-image: url('../../../images/pngegg1.png');
+    background-image: url('../../../images/pngegg1.avif');
     background-position: center;
     background-repeat: no-repeat;
     background-size: contain; 
@@ -18,15 +18,15 @@
 }
 @media screen and (min-width: 1280px) {
     .imgMain {
-            right: 30%;
+            right: 29%;
         }
 }
 .lightTheme {
     composes: imgMain;
-    background-image: url('../../../images/pngegg9.png');
+    background-image: url('../../../images/pngegg9.avif');
 }
 
 .darkTheme {
     composes: imgMain;
-    background-image: url('../../../images/pngegg1.png');
+    background-image: url('../../../images/pngegg1.avif');
 }

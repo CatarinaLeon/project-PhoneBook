@@ -15,7 +15,10 @@ export default function HomeView() {
   return (
     <div className={theme === themes.light ? s.lightTheme : s.darkTheme}>
       <h2 className={s.homeText}>{t("pages.homeText")}</h2>
-      <SecondLevelTitle message={t("pages.homeTitle")} />
+      <SecondLevelTitle
+        message={t("pages.homeTitle")}
+        className={s.homeTitle}
+      />
       <p className={s.subtitle}>{t("pages.subtitle")}</p>
       <NavLink to="/register" className={s.link}>
         {t("pages.titleReg")}

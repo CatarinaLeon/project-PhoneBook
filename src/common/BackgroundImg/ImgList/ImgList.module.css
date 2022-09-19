@@ -10,13 +10,13 @@
 }
 .lightTheme {
     composes: cat;
-    background-image: url('../../../images/pngegg9.png');
+    background-image: url('../../../images/pngegg9.avif');
     top: 435px;
 }
 
 .darkTheme {
     composes: cat;
-    background-image: url('../../../images/pngegg5.png');
+    background-image: url('../../../images/pngegg5.avif');
     top: 426px;
 }
 }

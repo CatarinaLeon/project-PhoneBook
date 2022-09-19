@@ -9,7 +9,7 @@
     display: inline-block;
     text-decoration: none;
     font-weight: 900;
-    font-size: 22px;
+    /* font-size: 22px; */
     color: var(--textColorMain);
 }
 
@@ -26,9 +26,18 @@
     align-items: center;
 }
 
+@media screen and (max-width: 480px) {
+.headerLink{
+    font-size: 14px;
+}
+}
+
 @media screen and (min-width: 480px) {
     .headerNav {
         max-width: 480px;
+    }
+    .headerLink{
+        font-size: 22px;
     }
 }
 

@@ -10,13 +10,13 @@
     }
     .lightTheme {
         composes: cat;
-        background-image: url('../../../images/pngegg13.png');
+        background-image: url('../../../images/pngegg13.avif');
         bottom: 90px;
     }
     
     .darkTheme {
         composes: cat;
-        background-image: url('../../../images/pngegg4.png');
+        background-image: url('../../../images/pngegg4.avif');
         bottom: 105px;
         z-index: 1;
     }
@@ -34,14 +34,14 @@
 }
 .lightTheme {
     composes: cat;
-    background-image: url('../../../images/pngegg8.png');
+    background-image: url('../../../images/pngegg8.avif');
     bottom: 85px; 
     left: 0px;
 }
 
 .darkTheme {
     composes: cat;
-    background-image: url('../../../images/pngegg5.png');
+    background-image: url('../../../images/pngegg5.avif');
     bottom: 70px;
     right: 0px;
 
@@ -55,7 +55,7 @@
 }
 .lightThemeCat {
     composes: catHanging;
-    background-image: url('../../../images/pngegg7.png');
+    background-image: url('../../../images/pngegg7.avif');
     right: 5%;
     top: 80px;
     width: 155px;

@@ -1,5 +1,5 @@
 import { useTranslation } from "react-i18next";
-import { ReactComponent as Feart } from "../../images/heart.svg";
+import { ReactComponent as Feart } from "../../images/icon-heart.svg";
 import s from "./Footer.module.css";
 
 export default function Footer() {

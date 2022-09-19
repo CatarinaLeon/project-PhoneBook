@@ -1,6 +1,6 @@
 import { useTranslation } from "react-i18next";
-import ukFlagIcon from "../../images/flag-ukrainian.png";
-import enFlagIcon from "../../images/flag-english.png";
+import ukFlagIcon from "../../images/flag-ukrainian.avif";
+import enFlagIcon from "../../images/flag-english.avif";
 import s from "./LanguageSwitcher.module.css";
 
 const languages = {
@@ -24,6 +24,7 @@ export default function LanguageSwitcher() {
               src={languages[lng].icon}
               alt={languages[lng].nativeName}
               width="50"
+              height="50"
             />
           </button>
         </div>
