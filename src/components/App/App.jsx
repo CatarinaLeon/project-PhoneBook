@@ -42,13 +42,13 @@ export default function App() {
       {isFetchingCurrentUser ? (
         <Loader />
       ) : (
-        <ThemeContext.Provider value={{ theme, toggleTheme }}>
-          <Suspense fallback={<Loader />}>
+        <Suspense fallback={<Loader />}>
+          <ThemeContext.Provider value={{ theme, toggleTheme }}>
             <HeaderNav />
             <Main />
             <Footer />
-          </Suspense>
-        </ThemeContext.Provider>
+          </ThemeContext.Provider>
+        </Suspense>
       )}
     </>
   );
