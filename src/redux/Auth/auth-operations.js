@@ -2,7 +2,8 @@ import { createAsyncThunk } from "@reduxjs/toolkit";
 import axios from "axios";
 
 // axios.defaults.baseURL = 'https://lpj-tasker.herokuapp.com';
-axios.defaults.baseURL = "https://connections-api.herokuapp.com";
+// axios.defaults.baseURL = "https://connections-api.herokuapp.com";
+axios.defaults.baseURL = 'https://connections-api.goit.global';
 
 const token = {
   set(token) {
@@ -20,9 +21,9 @@ const token = {
  */
 const register = createAsyncThunk(
   "auth/register",
-  async (credentials, { rejectWithValue }) => {
+  async ({ name, email, password }, { rejectWithValue }) => {
     try {
-      const { data } = await axios.post("/users/signup", credentials);
+      const { data } = await axios.post("/users/signup", { name, email, password });
       token.set(data.token);
       return data;
     } catch (error) {

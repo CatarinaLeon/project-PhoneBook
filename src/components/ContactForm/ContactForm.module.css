@@ -10,22 +10,19 @@
   url('../../images/pngegg15.avif');
   background-repeat: no-repeat;
   background-repeat: no-repeat;
-  background-size:
-  200px, 
-  200px;
-  background-position: 
-  0px -12px, 
-  500px 0px;
+  background-size: 200px, 200px;
+  background-position: 0px -12px, 500px 0px;
 }
 
 .contactInput {
-  width: 300px;
+  max-width: 100%;
   margin-bottom: 10px;
   border-radius: 5px;
   background-color: var(--backgroundThird);
   padding: 8px 20px;
   border: 1px solid var(--textColorBtn);
   transition-duration: 1000ms;
+  
 }
 .contactInput:hover, 
 .contactInput:focus{
@@ -42,4 +39,9 @@ transition-duration: 1000ms;
   background-color: var(--textColorBtn);
   box-shadow: 0 0 5px 1px var(--backgroundMain);
   transition-duration: 1000ms;
+}
+@media screen and (min-width: 768px) {
+.contactInput{
+  min-width: 300px;
+}
 }

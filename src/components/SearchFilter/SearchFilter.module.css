@@ -1,5 +1,5 @@
 .filterForm {
-  width: 350px;
+  width: 100%;
   margin: 0 auto;
   text-align: center;
   margin-bottom: 30px;
@@ -10,7 +10,6 @@
 }
 
 .filterInput {
-  width: 300px;
   margin-top: 5px;
   border-radius: 5px;
   background-color: var(--backgroundThird);
@@ -23,4 +22,17 @@
 .filterInput:focus {
   box-shadow: 0 0 5px 1px var(--textColorThird);
   transition-duration: 1000ms;
+}
+@media screen and (max-width: 480px) {
+  .filterInput {
+    width: 200px;
+}
+}
+@media screen and (min-width: 480px) {
+  .filterForm {
+    width: 350px;
+  }
+  .filterInput {
+    width: 300px;
+}
 }

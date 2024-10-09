@@ -8,8 +8,11 @@
 
 .listItem {
   display: flex;
-  justify-content: space-between;
+  justify-content: flex-start;
   align-items: center;
+  flex-wrap: wrap;
+  column-gap: 25px;
+  row-gap: 10px;
   min-height: 52px;
   padding: 8px 20px 8px 20px;
   background-color: var(--backgroundSecond);
@@ -32,6 +35,10 @@
 }
 
 @media screen and (min-width: 480px) {
+  .listItem{
+    justify-content: space-between;
+    flex-wrap: nowrap;
+  }
   .listItemText {
     width: 180px;
   }
